@@ -4,7 +4,7 @@ import matplotlib.pylab as mpl
 def sigmoid(x):
 	return 1 / (1+ np.exp(-x))
 
-def identify_function(x):
+def identity_function(x):
 	return x
 
 def init_network():
@@ -32,7 +32,7 @@ def forward(network, x):
 	z2 = sigmoid(a2)
 
 	a3 = np.dot(z2, W3) + b3
-	y = identify_function(a3)
+	y = identity_function(a3)
 
 	return y
 
